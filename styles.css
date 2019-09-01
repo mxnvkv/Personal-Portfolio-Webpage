@@ -1,0 +1,168 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body, ul, li {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Lexend Deca', sans-serif;
+    /*
+        box-sizing: border-box;
+        !! apply to all !!
+    */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: auto;
+
+    background-color: #2C3531;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+
+    margin-right: 4rem;
+}
+
+#navbar li {
+    width: auto;
+}
+
+#navbar a {
+    display: block;
+
+    padding: 0 30px;
+
+    color: #E3E2DF;
+
+    font-size: 20px;
+    line-height: 70px;
+
+    transition: background .2s;
+}
+
+#navbar a:hover {
+    background-color: #116466;
+}
+
+#welcome-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: #E3E2DF;
+}
+
+#projects {
+    background-color: #116466;
+    padding: 50px;
+}
+
+#projects h2 {
+    padding: 50px 0;
+
+    text-align: center;
+
+    color: #E3E2DF;
+}
+
+.projects-grid {
+    display: grid;
+
+    width: 100%;
+    height: auto;
+    /* padding: 50px; */
+
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    grid-auto-rows: 300px;
+    grid-gap: 35px;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #CEA2AC;
+}
+
+.project-tile a {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+
+    height: auto;
+    min-height: 50px;
+
+    text-align: center;
+
+    color: #2C3531;
+    background-color: #D9B08C;
+    transition: background .2s;
+}
+
+.project-tile a:hover {
+    background-color: #FFCB9A;
+}
+
+img {
+    width: 100%;
+    height: calc(100% - 50px);
+
+    object-fit: cover;
+}
+
+#contact_me {
+    padding: 50px 0;
+
+    text-align: center;
+
+    color: #E3E2DF;
+    background-color: #2C3531;
+}
+
+#contact_me a {
+    color: #D9B08C;
+    transition: color .2s;
+}
+
+#contact_me a:hover {
+    color: #FFCB9A;
+}
+
+@media ( max-width: 735px ) {
+    #navbar ul {
+        margin-right: 2rem;
+    }
+
+    #navbar a {
+        font-size: 15px;
+    }
+
+    .projects-grid {
+        grid-auto-rows: 1fr;
+    }
+}
